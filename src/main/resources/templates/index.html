@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Red Hat OpenShift - Spring Boot &amp; Database Demo</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <style>
+        .table-striped>tbody>tr:nth-child(odd)>td,
+        .table-striped>tbody>tr:nth-child(odd)>th {
+            background-color: #e6e6ff;
+        }
+
+        .details {
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+
+        .key {
+            width: 250px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<h1 id="heading" style="text-align: center">Red Hat OpenShift - Spring Boot &amp; Database Demo</h1>
+<div class="details">
+    <table class="table table-bordered table-striped table-responsive table-hover">
+        <tr>
+            <td class="key">Page Hits</td>
+            <td>
+                <p id="page_hits">Unknown</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="key">Button Hits</td>
+            <td>
+                <p id="hits">Unknown</p>
+            </td>
+        </tr>
+    </table>
+
+    <table class="table table-bordered table-striped table-responsive table-hover">
+        <tr>
+            <td class="key">Server IP</td>
+            <td>
+                <p id="ip" th:text="${server_ip}" />
+            </td>
+        </tr>
+        <tr>
+            <td class="key">Database Name</td>
+            <td>
+                <p id="db_name" th:text="${db_url}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="key">Environment Variable (TEXT)</td>
+            <td>
+                <p id="env_var">Unknown</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="key">Server Uptime</td>
+            <td>
+                <p id="time">Unknown</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="key">Architecture</td>
+            <td>
+                <p id="cpu">Unknown</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="key">Number of Cores</td>
+            <td>
+                <p id="cores">Unknown</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+
+</html>
